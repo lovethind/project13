@@ -1,0 +1,23 @@
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var sortVowels = function(s) {
+    const pos=[];
+    const output=[];
+    let cArray=[];
+for(let i=0;i<s.length;i++){
+    if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u' || s[i]=='A' || s[i]=='E' || s[i]=='I' || s[i]=='O' || s[i]=='U'){
+        cArray.push(s[i]);
+        pos.push(i);
+    }
+    else
+        output[i] = s[i];
+
+}
+cArray=cArray.sort();
+    for (let i = 0; i < pos.length; i++) {
+         output[pos[i]] = cArray[i];
+    }
+return output.join("");
+};
